@@ -1,0 +1,19 @@
+13:06:37 **** Incremental Build of configuration Debug for project RTC ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rtc_ds1307.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/rtc_ds1307.d" -MT"Src/rtc_ds1307.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rtc_ds1307.o"
+../Src/main.c:2:10: fatal error: ds1307.h: No such file or directory
+    2 | #include <ds1307.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+../Src/rtc_ds1307.c:6:10: fatal error: ds1307.h: No such file or directory
+    6 | #include <ds1307.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:28: Src/rtc_ds1307.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+13:06:39 Build Failed. 5 errors, 0 warnings. (took 1s.780ms)
+

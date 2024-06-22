@@ -1,0 +1,20 @@
+05:18:08 **** Incremental Build of configuration Debug for project led display ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/lcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lcd.d" -MT"Core/Src/lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lcd.o"
+arm-none-eabi-gcc -o "led display.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tarun\STM32CubeIDE\workspace_1.14.1\led display\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="led display.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `print':
+C:/Users/tarun/STM32CubeIDE/workspace_1.14.1/led display/Debug/../Core/Src/main.c:30: multiple definition of `print'; ./Core/Src/lcd.o:C:/Users/tarun/STM32CubeIDE/workspace_1.14.1/led display/Debug/../Core/Src/lcd.c:4: first defined here
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `lcd_cmd':
+C:/Users/tarun/STM32CubeIDE/workspace_1.14.1/led display/Debug/../Core/Src/main.c:97: multiple definition of `lcd_cmd'; ./Core/Src/lcd.o:C:/Users/tarun/STM32CubeIDE/workspace_1.14.1/led display/Debug/../Core/Src/lcd.c:79: first defined here
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `lcd_data':
+C:/Users/tarun/STM32CubeIDE/workspace_1.14.1/led display/Debug/../Core/Src/main.c:106: multiple definition of `lcd_data'; ./Core/Src/lcd.o:C:/Users/tarun/STM32CubeIDE/workspace_1.14.1/led display/Debug/../Core/Src/lcd.c:88: first defined here
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `lcd_init':
+C:/Users/tarun/STM32CubeIDE/workspace_1.14.1/led display/Debug/../Core/Src/main.c:116: multiple definition of `lcd_init'; ./Core/Src/lcd.o:C:/Users/tarun/STM32CubeIDE/workspace_1.14.1/led display/Debug/../Core/Src/lcd.c:97: first defined here
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `lcd_display':
+C:/Users/tarun/STM32CubeIDE/workspace_1.14.1/led display/Debug/../Core/Src/main.c:123: multiple definition of `lcd_display'; ./Core/Src/lcd.o:C:/Users/tarun/STM32CubeIDE/workspace_1.14.1/led display/Debug/../Core/Src/lcd.c:104: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: led display.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+05:18:35 Build Failed. 6 errors, 0 warnings. (took 27s.105ms)
+

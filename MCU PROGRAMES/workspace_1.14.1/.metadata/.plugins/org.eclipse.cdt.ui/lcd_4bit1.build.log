@@ -1,0 +1,17 @@
+17:34:52 **** Incremental Build of configuration Debug for project lcd_4bit1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lcd_4bit1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tarun\STM32CubeIDE\workspace_1.14.1\lcd_4bit1\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lcd_4bit1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lcd_4bit1.elf
+ 
+arm-none-eabi-size  lcd_4bit1.elf 
+arm-none-eabi-objdump -h -S lcd_4bit1.elf  > "lcd_4bit1.list"
+   text	   data	    bss	    dec	    hex	filename
+   9168	     20	   1644	  10832	   2a50	lcd_4bit1.elf
+Finished building: default.size.stdout
+ 
+Finished building: lcd_4bit1.list
+ 
+
+17:34:56 Build Finished. 0 errors, 0 warnings. (took 4s.93ms)
+

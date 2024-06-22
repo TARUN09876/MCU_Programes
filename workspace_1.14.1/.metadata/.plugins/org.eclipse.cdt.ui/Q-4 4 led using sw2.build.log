@@ -1,0 +1,16 @@
+15:30:57 **** Incremental Build of configuration Debug for project Q-4 4 led using sw2 ****
+make -j4 all 
+arm-none-eabi-gcc -o "Q-4 4 led using sw2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\tarun\STM32CubeIDE\workspace_1.14.1\Q-4 4 led using sw2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Q-4 4 led using sw2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Q-4 4 led using sw2.elf
+ 
+arm-none-eabi-size  Q-4\ 4\ led\ using\ sw2.elf 
+arm-none-eabi-objdump -h -S Q-4\ 4\ led\ using\ sw2.elf  > "Q-4 4 led using sw2.list"
+   text	   data	    bss	    dec	    hex	filename
+   6884	     20	   1572	   8476	   211c	Q-4 4 led using sw2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Q-4 4 led using sw2.list
+ 
+
+15:31:03 Build Finished. 0 errors, 0 warnings. (took 6s.823ms)
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;RTC/Inc/RTC.h&apos; to &apos;stm32f446xx.h&apos;" description="Rename resource &apos;RTC.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Inc/RTC.h" name="stm32f446xx.h" stamp="1711774917340" updateReferences="true"/>
+</session>

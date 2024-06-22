@@ -1,0 +1,9 @@
+16:41:57 **** Incremental Build of configuration Debug for project LCD_4bit ****
+make -j4 all 
+arm-none-eabi-size  LCD_4bit.elf 
+arm-none-eabi-size: LCD_4bit.elf: file format not recognized
+make: *** [makefile:69: default.size.stdout] Error 3
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+16:41:58 Build Failed. 1 errors, 0 warnings. (took 681ms)
+

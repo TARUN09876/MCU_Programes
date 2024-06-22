@@ -1,0 +1,56 @@
+09:20:42 **** Build of configuration Debug for project lcd disp1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:36:1: error: expected identifier or '(' before '}' token
+   36 | }
+      | ^
+../Core/Src/main.c:154:5: error: redefinition of 'main'
+  154 | int main(void)
+      |     ^~~~
+../Core/Src/main.c:24:5: note: previous definition of 'main' with type 'int(void)'
+   24 | int main(void)
+      |     ^~~~
+../Core/Src/main.c:166:1: error: expected identifier or '(' before '}' token
+  166 | }
+      | ^
+../Core/Src/main.c:168:6: error: redefinition of 'LCD_string'
+  168 | void LCD_string(char str[])
+      |      ^~~~~~~~~~
+../Core/Src/main.c:38:6: note: previous definition of 'LCD_string' with type 'void(char *)'
+   38 | void LCD_string(char str[])
+      |      ^~~~~~~~~~
+../Core/Src/main.c:179:1: error: redefinition of 'LCD_init'
+  179 | LCD_init(void)
+      | ^~~~~~~~
+../Core/Src/main.c:49:1: note: previous definition of 'LCD_init' with type 'void(void)'
+   49 | LCD_init(void)
+      | ^~~~~~~~
+../Core/Src/main.c:195:6: error: redefinition of 'PORTS_init'
+  195 | void PORTS_init(void)
+      |      ^~~~~~~~~~
+../Core/Src/main.c:65:6: note: previous definition of 'PORTS_init' with type 'void(void)'
+   65 | void PORTS_init(void)
+      |      ^~~~~~~~~~
+../Core/Src/main.c:207:6: error: redefinition of 'LCD_command'
+  207 | void LCD_command(unsigned char command)
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:77:6: note: previous definition of 'LCD_command' with type 'void(unsigned char)'
+   77 | void LCD_command(unsigned char command)
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:221:6: error: redefinition of 'LCD_data'
+  221 | void LCD_data(char data)
+      |      ^~~~~~~~
+../Core/Src/main.c:91:6: note: previous definition of 'LCD_data' with type 'void(char)'
+   91 | void LCD_data(char data)
+      |      ^~~~~~~~
+../Core/Src/main.c:236:6: error: redefinition of 'delayMs'
+  236 | void delayMs(int n)
+      |      ^~~~~~~
+../Core/Src/main.c:106:6: note: previous definition of 'delayMs' with type 'void(int)'
+  106 | void delayMs(int n)
+      |      ^~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+09:20:50 Build Failed. 10 errors, 0 warnings. (took 8s.144ms)
+

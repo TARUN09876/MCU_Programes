@@ -1,0 +1,87 @@
+13:21:38 **** Incremental Build of configuration Debug for project free_rtos1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+../Core/Src/main.c: In function 'StartLED_01':
+../Core/Src/main.c:309:36: error: 'GPIO' undeclared (first use in this function); did you mean 'GPIOH'?
+  309 |           HAL_GPIO_TogglePin(GPIOA,GPIO,pin_4);
+      |                                    ^~~~
+      |                                    GPIOH
+../Core/Src/main.c:309:36: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:309:41: error: 'pin_4' undeclared (first use in this function)
+  309 |           HAL_GPIO_TogglePin(GPIOA,GPIO,pin_4);
+      |                                         ^~~~~
+../Core/Src/main.c:309:11: error: too many arguments to function 'HAL_GPIO_TogglePin'
+  309 |           HAL_GPIO_TogglePin(GPIOA,GPIO,pin_4);
+      |           ^~~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:279,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:236:6: note: declared here
+  236 | void HAL_GPIO_TogglePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'StartLED_02':
+../Core/Src/main.c:329:11: warning: implicit declaration of function 'HAL_GPIO_TogglePinO'; did you mean 'HAL_GPIO_TogglePin'? [-Wimplicit-function-declaration]
+  329 |           HAL_GPIO_TogglePinO(GPIOA,GPIO_pin_5);
+      |           ^~~~~~~~~~~~~~~~~~~
+      |           HAL_GPIO_TogglePin
+../Core/Src/main.c:329:37: error: 'GPIO_pin_5' undeclared (first use in this function); did you mean 'GPIO_PIN_5'?
+  329 |           HAL_GPIO_TogglePinO(GPIOA,GPIO_pin_5);
+      |                                     ^~~~~~~~~~
+      |                                     GPIO_PIN_5
+../Core/Src/main.c:331:25: error: expected ';' before '}' token
+  331 |           HAL_Delay(300)
+      |                         ^
+      |                         ;
+  332 |   }
+      |   ~                      
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+../Core/Src/main.c: In function 'StartLED_03':
+../Core/Src/main.c:349:37: error: 'GPIO_pin_6' undeclared (first use in this function); did you mean 'GPIO_PIN_6'?
+  349 |           HAL_GPIO_TogglePinO(GPIOA,GPIO_pin_6);
+      |                                     ^~~~~~~~~~
+      |                                     GPIO_PIN_6
+../Core/Src/main.c:351:11: warning: implicit declaration of function 'HAl_Delay'; did you mean 'HAL_Delay'? [-Wimplicit-function-declaration]
+  351 |           HAl_Delay(450);
+      |           ^~~~~~~~~
+      |           HAL_Delay
+../Core/Src/main.c: In function 'StartTLED_04':
+../Core/Src/main.c:369:37: error: 'GPIO_pin_7' undeclared (first use in this function); did you mean 'GPIO_PIN_7'?
+  369 |           HAL_GPIO_TogglePinO(GPIOA,GPIO_pin_7);
+      |                                     ^~~~~~~~~~
+      |                                     GPIO_PIN_7
+../Core/Src/main.c:371:25: error: expected ';' before '}' token
+  371 |           HAL_Delay(600)
+      |                         ^
+      |                         ;
+  372 |   }
+      |   ~                      
+../Core/Src/main.c: In function 'StartLED_05':
+../Core/Src/main.c:389:37: error: 'GPIO_pin_8' undeclared (first use in this function); did you mean 'GPIO_PIN_8'?
+  389 |           HAL_GPIO_TogglePinO(GPIOA,GPIO_pin_8);
+      |                                     ^~~~~~~~~~
+      |                                     GPIO_PIN_8
+../Core/Src/main.c: In function 'StartLED_06':
+../Core/Src/main.c:408:37: error: 'GPIO_pin_9' undeclared (first use in this function); did you mean 'GPIO_PIN_9'?
+  408 |           HAL_GPIO_TogglePinO(GPIOA,GPIO_pin_9);
+      |                                     ^~~~~~~~~~
+      |                                     GPIO_PIN_9
+../Core/Src/main.c: In function 'StartLED_7':
+../Core/Src/main.c:427:37: error: 'GPIO_pin_10' undeclared (first use in this function); did you mean 'GPIO_PIN_10'?
+  427 |           HAL_GPIO_TogglePinO(GPIOA,GPIO_pin_10);
+      |                                     ^~~~~~~~~~~
+      |                                     GPIO_PIN_10
+../Core/Src/main.c: In function 'StartLED_08':
+../Core/Src/main.c:446:37: error: 'GPIO_pin_11' undeclared (first use in this function); did you mean 'GPIO_PIN_11'?
+  446 |           HAL_GPIO_TogglePinO(GPIOA,GPIO_pin_11);
+      |                                     ^~~~~~~~~~~
+      |                                     GPIO_PIN_11
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+13:21:46 Build Failed. 14 errors, 2 warnings. (took 7s.420ms)
+

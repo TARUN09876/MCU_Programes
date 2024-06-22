@@ -1,0 +1,10 @@
+11:55:19 **** Incremental Build of configuration Debug for project RTC_i2C ****
+make -j4 all 
+arm-none-eabi-size  RTC_i2C.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13708	    116	   2116	  15940	   3e44	RTC_i2C.elf
+Finished building: default.size.stdout
+ 
+
+11:55:20 Build Finished. 0 errors, 0 warnings. (took 1s.362ms)
+

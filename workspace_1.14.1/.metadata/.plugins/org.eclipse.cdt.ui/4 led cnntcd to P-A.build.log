@@ -1,0 +1,10 @@
+11:53:49 **** Incremental Build of configuration Debug for project 4 led cnntcd to P-A ****
+make -j4 all 
+arm-none-eabi-size  4\ led\ cnntcd\ to\ P-A.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6824	     20	   1572	   8416	   20e0	4 led cnntcd to P-A.elf
+Finished building: default.size.stdout
+ 
+
+11:53:51 Build Finished. 0 errors, 0 warnings. (took 1s.650ms)
+

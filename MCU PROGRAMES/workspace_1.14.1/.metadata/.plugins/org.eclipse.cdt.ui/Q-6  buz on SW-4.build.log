@@ -1,0 +1,10 @@
+16:18:06 **** Incremental Build of configuration Debug for project Q-6  buz on SW-4 ****
+make -j4 all 
+arm-none-eabi-size  Q-6\ \ buz\ on\ SW-4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6824	     20	   1572	   8416	   20e0	Q-6  buz on SW-4.elf
+Finished building: default.size.stdout
+ 
+
+16:18:07 Build Finished. 0 errors, 0 warnings. (took 997ms)
+

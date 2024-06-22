@@ -1,0 +1,10 @@
+14:41:31 **** Build of configuration Debug for project lcd display using stm 32 ****
+make -j4 all 
+arm-none-eabi-size  lcd\ display\ using\ stm\ 32.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8380	     20	   1572	   9972	   26f4	lcd display using stm 32.elf
+Finished building: default.size.stdout
+ 
+
+14:41:33 Build Finished. 0 errors, 0 warnings. (took 2s.783ms)
+

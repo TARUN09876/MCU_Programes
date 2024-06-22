@@ -1,0 +1,10 @@
+12:18:20 **** Incremental Build of configuration Debug for project Q2- P-B 4 led ****
+make -j4 all 
+arm-none-eabi-size  Q2-\ P-B\ 4\ led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8628	     20	   1644	  10292	   2834	Q2- P-B 4 led.elf
+Finished building: default.size.stdout
+ 
+
+12:18:21 Build Finished. 0 errors, 0 warnings. (took 1s.72ms)
+

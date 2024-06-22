@@ -1,0 +1,27 @@
+10:32:01 **** Incremental Build of configuration Debug for project MYRTOS_PROJECT ****
+make -j4 all 
+arm-none-eabi-gcc "../Custom_FreeRTOS/portable/GCC/ARM_CM4F/port.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I"C:/Users/tarun/STM32CubeIDE/workspace_1.14.1/MYRTOS_PROJECT/Custom_FreeRTOS/include" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Custom_FreeRTOS/portable/GCC/ARM_CM4F/port.d" -MT"Custom_FreeRTOS/portable/GCC/ARM_CM4F/port.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Custom_FreeRTOS/portable/GCC/ARM_CM4F/port.o"
+In file included from C:/Users/tarun/STM32CubeIDE/workspace_1.14.1/MYRTOS_PROJECT/Custom_FreeRTOS/include/portable.h:53,
+                 from C:/Users/tarun/STM32CubeIDE/workspace_1.14.1/MYRTOS_PROJECT/Custom_FreeRTOS/include/FreeRTOS.h:65,
+                 from ../Custom_FreeRTOS/portable/GCC/ARM_CM4F/port.c:34:
+C:/Users/tarun/STM32CubeIDE/workspace_1.14.1/MYRTOS_PROJECT/Custom_FreeRTOS/include/portmacro.h:123: warning: ignoring '#pragma diag_suppress ' [-Wunknown-pragmas]
+  123 |     #pragma diag_suppress=Pa082
+      | 
+../Custom_FreeRTOS/portable/GCC/ARM_CM4F/port.c: In function 'SVC_Handler':
+../Custom_FreeRTOS/portable/GCC/ARM_CM4F/port.c:253:9: warning: statement with no effect [-Wunused-value]
+  253 |         "       ldr     r3, pxCurrentTCBConst2          \n"/* Restore the context. */
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Custom_FreeRTOS/portable/GCC/ARM_CM4F/port.c:264:76: error: expected ';' before ')' token
+  264 |       "pxCurrentTCBConst2: .word pxCurrentTCB                           \n"
+      |                                                                            ^
+      |                                                                            ;
+  265 |         );
+      |         ~                                                                   
+../Custom_FreeRTOS/portable/GCC/ARM_CM4F/port.c:265:9: error: expected statement before ')' token
+  265 |         );
+      |         ^
+make: *** [Custom_FreeRTOS/portable/GCC/ARM_CM4F/subdir.mk:19: Custom_FreeRTOS/portable/GCC/ARM_CM4F/port.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+10:32:04 Build Failed. 3 errors, 2 warnings. (took 2s.798ms)
+
